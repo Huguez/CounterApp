@@ -13,7 +13,7 @@ import { HelloScreen } from './src/presentation/screens/HelloScreen';
 function App(): React.JSX.Element {
   
   return <SafeAreaView style={ styles.safeArea }> 
-    <HelloScreen name='Huguez'/>
+    <HelloScreen name='Huguez'/>   
   </SafeAreaView>
 }
 

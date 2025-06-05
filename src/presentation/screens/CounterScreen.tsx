@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import { StyleSheet, Text, View } from 'react-native'
+import { MyButton } from '../components';
 
 interface props {
 
@@ -13,18 +14,11 @@ const CounterScreen = ( {}: props ) => {
          <Text style={ styles.title } > Counter: { counter } </Text>
 
          <View style={ styles.wrapBtns }>
-
-            <TouchableOpacity  onPress={()=> setCounter( prev => prev-1 )} >
-               <Text style={ styles.btn }> -1 </Text>
-            </TouchableOpacity>
+            <MyButton onClick={()=> setCounter( prev => prev-1 )} label={'-1'} />
             
-            <TouchableOpacity  onPress={()=> setCounter( 0 )} >
-               <Text style={ styles.btn }> reset </Text>
-            </TouchableOpacity>
+            <MyButton onClick={()=> setCounter( 0 )} label={'reset'} />
 
-            <TouchableOpacity  onPress={()=> setCounter( prev => prev+1 )} >
-               <Text style={ styles.btn }> +1 </Text>
-            </TouchableOpacity>
+            <MyButton onClick={()=> setCounter( prev => prev+1 )} label={'+1'} />
          </View>
       </View>
    )
