@@ -20,7 +20,7 @@ function App(): React.JSX.Element {
 
   return <PaperProvider settings={ settings }>
     <SafeAreaView style={ styles.safeArea }> 
-      <HelloScreen name='Huguez'/>
+      {/* <HelloScreen name='Huguez'/> */}
     </SafeAreaView>
   </PaperProvider>
 }
