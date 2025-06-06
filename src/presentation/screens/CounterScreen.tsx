@@ -1,15 +1,14 @@
 import React, { useState } from 'react'
 import { StyleSheet, Text, View } from 'react-native'
-import { MyButton } from '../components';
+import { MyButton, MyFAB } from '../components';
 
-interface props {
 
-}
+interface props {}
 
 const CounterScreen = ( {}: props ) => {
    const [ counter, setCounter ] = useState<number>( 0 );
 
-   return (
+   return (<>
       <View style={ styles.container }>
          <Text style={ styles.title } > Counter: { counter } </Text>
 
@@ -19,9 +18,12 @@ const CounterScreen = ( {}: props ) => {
             <MyButton onClick={()=> setCounter( 0 )} label={'reset'} />
 
             <MyButton onClick={()=> setCounter( prev => prev+1 )} label={'+1'} />
+
+            
          </View>
       </View>
-   )
+      <MyFAB onClick={()=> setCounter( prev => prev+2 ) } />
+   </> )
 }
 
 const styles = StyleSheet.create({

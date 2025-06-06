@@ -7,14 +7,22 @@
 
 import React from 'react';
 import { SafeAreaView, StyleSheet } from 'react-native';
+import {  PaperProvider } from 'react-native-paper';
 import { HelloScreen } from './src/presentation/screens/HelloScreen';
 
+import Icon from 'react-native-vector-icons/Ionicons'
 
 function App(): React.JSX.Element {
-  
-  return <SafeAreaView style={ styles.safeArea }> 
-    <HelloScreen name='Huguez'/>   
-  </SafeAreaView>
+
+  const settings = {
+    icon: (props: any) => <Icon { ...props } />
+  }
+
+  return <PaperProvider settings={ settings }>
+    <SafeAreaView style={ styles.safeArea }> 
+      <HelloScreen name='Huguez'/>
+    </SafeAreaView>
+  </PaperProvider>
 }
 
 
