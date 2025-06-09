@@ -14,8 +14,8 @@ function App(): React.JSX.Element {
 
   return <PaperProvider settings={ settings }>
     <SafeAreaView style={ styles.safeArea }> 
-      <DesignScreen />
-      {/* <HomeworkScreen /> */}
+      {/* <DesignScreen /> */}
+      <HomeworkScreen />
     </SafeAreaView>
   </PaperProvider>
 }
