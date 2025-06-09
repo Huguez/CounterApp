@@ -1,8 +1,10 @@
 import React from 'react';
 import { SafeAreaView, StyleSheet } from 'react-native';
 import {  PaperProvider } from 'react-native-paper';
-import { DesignScreen } from './src/presentation/screens';
+// import { DesignScreen } from './src/presentation/screens';
 import Icon from 'react-native-vector-icons/Ionicons'
+import { HomeworkScreen } from './src/presentation/screens/HomeworkScreen';
+import { DesignScreen } from './src/presentation/screens';
 
 function App(): React.JSX.Element {
 
@@ -13,6 +15,7 @@ function App(): React.JSX.Element {
   return <PaperProvider settings={ settings }>
     <SafeAreaView style={ styles.safeArea }> 
       <DesignScreen />
+      {/* <HomeworkScreen /> */}
     </SafeAreaView>
   </PaperProvider>
 }
